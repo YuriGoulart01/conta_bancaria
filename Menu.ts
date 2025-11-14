@@ -98,13 +98,29 @@ while (true) {
             contas.deletar(numero)
             break;
         case 6:
-            console.log("Opção 6")
+            console.log("\n******** Saque ********");
+            console.log("\nDigite o número da conta: ");
+            numero = readline.questionInt("");
+            console.log("Digite o valor do saque (R$): ");
+            let valor = readline.questionInt("");
+            contas.sacar(numero,valor);
             break;
         case 7:
-            console.log("Opção 7")
+            console.log("\n******** Saque ********");
+            console.log("\nDigite o número da conta: ");
+            numero = readline.questionInt("");
+            console.log("Digite o valor do depósito (R$): ");
+            valor = readline.questionInt("");
+            contas.depositar(numero,valor);
             break;
         case 8:
-            console.log("Opção 8")
+            console.log("\n******** Saque ********");
+            console.log("\nDigite o número da conta de origem: ");
+            numero = readline.questionInt("");
+            console.log("\nDigite o número da conta destino: ");
+            let numeroDestino = readline.questionInt("");
+            console.log("Digite o valor da transferencia (R$): ");
+            valor = readline.questionInt("");
+            contas.transferir(numero,numeroDestino,valor);
             break;
-    }
-}
+  
